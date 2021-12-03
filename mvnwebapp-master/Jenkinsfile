@@ -6,27 +6,10 @@ pipeline {
 
             steps {
                 withMaven(maven : 'MAVEN_HOME') {
-                    sh 'mvn test'
+                    mvn test
                 }
             }
         }
-
-        stage ('Testing Stage') {
-
-            steps {
-                withMaven(maven : 'MAVEN_HOME') {
-                    sh 'mvn test'
-                }
-            }
-        }
-
-
-        stage ('Deployment Stage') {
-            steps {
-                withMaven(maven : 'MAVEN_HOME') {
-                    sh 'mvn deploy'
-                }
-            }
-        }
+        
     }
 }
