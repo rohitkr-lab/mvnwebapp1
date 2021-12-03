@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'MAVEN_HOME') {
-                 call mvn clean 
+                 bat ' mvn clean install' 
                 }
             }
         }
