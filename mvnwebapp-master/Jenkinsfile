@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'MAVEN_HOME') {
-                 bat ' mvn -f  mvnwebapp1/mvnwebapp-master/pom.xml clean install' 
+                 bat ' mvn -f mvnwebapp-master/pom.xml clean install' 
                    
                 }
             }
