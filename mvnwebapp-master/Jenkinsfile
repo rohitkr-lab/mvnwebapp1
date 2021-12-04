@@ -13,8 +13,9 @@ pipeline {
         }
         
         stage ('Deploy to Tomcat') {
-            deploy adapters: [tomcat9(path: '', url: 'http://desktop-jjolf8r:8081/')], contextPath: 'mavenJenkins', onFailure: false, war: '**/*.war'
             echo "Deploy successful";
+            deploy adapters: [tomcat9(path: '', url: 'http://desktop-jjolf8r:8081/')], contextPath: 'mavenJenkins', onFailure: false, war: '**/*.war'
+            
         }
         
     }
