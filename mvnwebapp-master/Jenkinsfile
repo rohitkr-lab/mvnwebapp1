@@ -1,3 +1,4 @@
+//Note : credentialsId added through Jenkins credential presnt in manage jenkins -> Stores scoped to Jenkins ->  Global credentials (unrestricted)  -> 
 pipeline {
     agent any
 
