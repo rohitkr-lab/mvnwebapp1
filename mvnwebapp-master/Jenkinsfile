@@ -15,7 +15,7 @@ pipeline {
         stage ('Deploy to Tomcat') {
             steps {
             echo "Deploy successful";
-            deploy adapters: [tomcat9(username: 'admintom', password: 'admintom',path: '', url: 'http://desktop-jjolf8r:8081/')], contextPath: 'mavenJenkins', onFailure: false, war: '**/*.war'
+            deploy adapters: [tomcat9(credentialsId: 'admintom',path: '', url: 'http://desktop-jjolf8r:8081/')], contextPath: 'mavenJenkins', onFailure: false, war: '**/*.war'
             }
             
         }
